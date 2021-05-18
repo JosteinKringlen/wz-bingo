@@ -7,6 +7,7 @@ import type { AppProps } from 'next/app';
 import Head from 'next/head';
 
 import NavBar from '../components/navbar';
+import { BingoContextProvider } from '../contexts/bingo-context';
 
 function MyApp({ Component, pageProps }: AppProps): JSX.Element {
     return (
@@ -15,7 +16,9 @@ function MyApp({ Component, pageProps }: AppProps): JSX.Element {
                 <title>WZ Bingo</title>
             </Head>
             <NavBar />
-            <Component {...pageProps} />
+            <BingoContextProvider>
+                <Component {...pageProps} />
+            </BingoContextProvider>
         </>
     );
 }

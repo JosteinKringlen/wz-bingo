@@ -1,15 +1,14 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import { Box, Button, Card, Switch, Text } from '@dracula/dracula-ui';
-import { useImmer } from 'use-immer';
 
+import { useBingoContext } from '../contexts/bingo-context';
 import { getRandomBingoBoard } from '../lib/alternatives';
 
 const FREE_INDEX = 12;
 
 export default function Home(): JSX.Element {
-    const [checked, setChecked] = useImmer(() => new Array(25).fill(false));
-    const [board, setBoard] = useImmer<Array<string>>([]);
-    const [useFree, setUseFree] = useImmer(false);
+    const { checked, setChecked, board, setBoard, useFree, setUseFree } =
+        useBingoContext();
 
     return (
         <div className="pageholder drac-px-xs">

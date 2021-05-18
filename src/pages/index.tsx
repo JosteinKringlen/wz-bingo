@@ -66,7 +66,7 @@ export default function Home(): JSX.Element {
                               variant="subtle"
                               style={{ aspectRatio: '1' }}
                               display="flex"
-                              className="items-center justify-center"
+                              className="items-center justify-center cursor-pointer"
                               key={element}
                               onClick={() => {
                                   setChecked((draft) => {

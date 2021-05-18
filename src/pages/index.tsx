@@ -18,7 +18,7 @@ export default function Home(): JSX.Element {
                 variant="subtle"
                 className="max-w-1/1 md:max-w-4/6"
                 mx="auto"
-                mb="md"
+                my="md"
                 p="sm"
             >
                 <Text>Create a new bingo board:</Text>
@@ -58,6 +58,7 @@ export default function Home(): JSX.Element {
             <Box
                 className="grid grid-cols-5 grid-rows-5 gap-1 max-w-1/1 md:max-w-4/6"
                 mx="auto"
+                mb="md"
             >
                 {board.length
                     ? board.map((element, index) => (

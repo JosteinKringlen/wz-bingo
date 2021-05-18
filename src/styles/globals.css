@@ -1,7 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 .pageholder {
     max-width: 1010px;
     margin-left: auto;

@@ -1,4 +1,6 @@
 import '@dracula/dracula-ui/styles/dracula-ui.css';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import 'tailwindcss/tailwind.css';
 import '../styles/globals.css';
 
 import type { AppProps } from 'next/app';

@@ -33,7 +33,7 @@ export default function Home(): JSX.Element {
                         }}
                     />
                     <label htmlFor="demo" className="drac-text drac-text-white">
-                        Center is <Text className="italic">FREE</Text>
+                        <Text className="italic">FREE</Text> center
                     </label>
                 </Box>
                 <Button

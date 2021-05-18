@@ -62,12 +62,13 @@ export default function Home(): JSX.Element {
             >
                 {board.length
                     ? board.map((element, index) => (
-                          <Card
+                          <button
+                              type="button"
                               color={checked[index] ? 'green' : 'red'}
-                              variant="subtle"
                               style={{ aspectRatio: '1' }}
-                              display="flex"
-                              className="items-center justify-center cursor-pointer"
+                              className={`items-center justify-center cursor-pointer flex drac-card-subtle drac-rounded drac-border-${
+                                  checked[index] ? 'green' : 'red'
+                              }`}
                               key={element}
                               onClick={() => {
                                   setChecked((draft) => {
@@ -86,7 +87,7 @@ export default function Home(): JSX.Element {
                               >
                                   {element}
                               </Text>
-                          </Card>
+                          </button>
                       ))
                     : null}
             </Box>

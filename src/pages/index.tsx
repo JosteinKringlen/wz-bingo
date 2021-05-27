@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import { Box, Button, Card, Switch, Text } from '@dracula/dracula-ui';
+import { motion } from 'framer-motion';
 
 import { useBingoContext } from '../contexts/bingo-context';
 import { getRandomBingoBoard } from '../lib/alternatives';
@@ -61,7 +62,7 @@ export default function Home(): JSX.Element {
             >
                 {board.length
                     ? board.map((element, index) => (
-                          <button
+                          <motion.button
                               type="button"
                               color={checked[index] ? 'green' : 'red'}
                               style={{ aspectRatio: '1' }}
@@ -74,6 +75,8 @@ export default function Home(): JSX.Element {
                                       draft[index] = !draft[index];
                                   });
                               }}
+                              whileHover={{ scale: 1.05 }}
+                              whileTap={{ scale: 0.98 }}
                           >
                               <Text
                                   className="drac-text-xs md:text-drac-md break-words max-w-1/1"
@@ -86,7 +89,7 @@ export default function Home(): JSX.Element {
                               >
                                   {element}
                               </Text>
-                          </button>
+                          </motion.button>
                       ))
                     : null}
             </Box>

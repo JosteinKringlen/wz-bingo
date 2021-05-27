@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@dracula/dracula-ui": "^0.8.0",
+    "framer-motion": "^4.1.17",
     "immer": "^9.0.2",
     "next": "10.2.0",
     "react": "17.0.2",

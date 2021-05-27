@@ -3,6 +3,7 @@ import '@dracula/dracula-ui/styles/dracula-ui.css';
 import 'tailwindcss/tailwind.css';
 import '../styles/globals.css';
 
+import { AnimateSharedLayout } from 'framer-motion';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
 
@@ -17,7 +18,9 @@ function MyApp({ Component, pageProps }: AppProps): JSX.Element {
             </Head>
             <NavBar />
             <BingoContextProvider>
-                <Component {...pageProps} />
+                <AnimateSharedLayout>
+                    <Component {...pageProps} />
+                </AnimateSharedLayout>
             </BingoContextProvider>
         </>
     );

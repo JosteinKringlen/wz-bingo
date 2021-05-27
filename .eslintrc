@@ -30,7 +30,8 @@
     "no-param-reassign": ["error", { "props": true, "ignorePropertyModificationsFor": ["draft"] }],
     "simple-import-sort/imports": "error",
     "simple-import-sort/exports": "error",
-    "import/order": "off"
+    "import/order": "off",
+    "@typescript-eslint/consistent-type-imports": "error"
   },
   "overrides": [
     {
